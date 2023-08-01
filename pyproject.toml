@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "funky-freddie"
+version = "0.1.0"
+description = "A connector for a fake application for demo purposes."
+authors = ["Dan <dan@sartography.com>"]
+readme = "README.md"
+packages = [{include = "funky-freddie",  from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+simplejson = "^3.17.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
